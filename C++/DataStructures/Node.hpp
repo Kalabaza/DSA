@@ -2,7 +2,12 @@
 
 template<typename T>
 struct Node {
-	T m_value;
-	Node* m_next;
-	Node(T value) : m_value{ value }, m_next{ nullptr } {}
+   // The content of the node
+   T m_value;
+   // Pointer to a next element
+   Node *m_next;
+   // Default constructor
+   Node() : m_value{0}, m_next{nullptr} {}
+   // Constructor that receives the value for the node
+   explicit Node(T value) : m_value{value}, m_next{nullptr} {}
 };
